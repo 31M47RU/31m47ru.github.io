@@ -1,0 +1,41 @@
+/*    BODY    */
+body{
+    background: rgb(230, 230, 230);
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);}
+.dark{
+    background: rgb(32, 33, 53);}
+
+#modo{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    background-color: cornflowerblue;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: rotate(360deg);}
+.dark #modo{
+    background-color: rgb(195, 195, 255);
+    transform: rotate(-180deg);}
+
+/*    TEXTOS    */
+h1{
+    text-align: center;
+    color: black;
+    font-size: 70px;}
+.dark h1{
+    color: rgb(195, 195, 255);}
+
+h2{
+    position: absolute;
+    text-anchor: middle;
+    text-align: center;
+    color: black;
+    font-size: 25px;}
+.dark h2{
+    color: rgb(195, 195, 255);}
