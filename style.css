@@ -1,0 +1,77 @@
+body {
+    background-color: #1f2b38;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tH {
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bold;
+}
+
+.table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+.tTD {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    border: 2px solid #a5b1c2;
+    border-radius: 5px;
+    background-color: #2e4647;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+}
+
+.oP {
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.oDiv {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding: 10px;
+    background-color: #2e4647;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 2px solid aliceblue;
+}
+
+.oBut {
+    color: aliceblue;
+    font-size: 20px;
+    padding: 15px;
+    margin: 3px;
+    background-color: #1f2b38;
+    border: 3px solid aliceblue;
+    border-radius: 10px;
+}
+
+.oBut:hover {
+    background-color: #34485e;
+    border: 3px solid black;
+    cursor: pointer;
+    color: black;
+}
+
+.oBut.on:hover{
+    border: 3px solid black;
+}
+
+.oBut.on {
+    color: lightblue;
+    background-color: rgb(5, 43, 19);
+    text-decoration: line-through;
+}
