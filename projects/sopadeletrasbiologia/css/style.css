@@ -1,0 +1,74 @@
+body {
+    background-color: #174442;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tH {
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bold;
+}
+
+.table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    margin-right: 20px;
+    margin-left: 20px;
+    overflow-x: auto;
+    height: fit-content;
+    width: fit-content;
+}
+
+.tTD {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    border: 2px solid #a5b1c2;
+    border-radius: 5px;
+    background-color: #1e6662;
+    flex-wrap: wrap;
+}
+
+.oP {
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.oDiv {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding: 10px;
+    background-color: #1e6662;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 2px solid aliceblue;
+}
+
+.oBut {
+    color: aliceblue;
+    font-size: 20px;
+    padding: 15px;
+    margin: 3px;
+    background-color: #215b6d;
+    border: 2px solid aliceblue;
+    border-radius: 10px;
+}
+
+.oBut:hover {
+    background-color: #153a46;
+    cursor: pointer;
+}
+
+.oBut.on {
+    color: lightblue;
+    background-color: #153a46;
+    text-decoration: line-through;
+}
