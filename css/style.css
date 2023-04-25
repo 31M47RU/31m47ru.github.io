@@ -58,7 +58,7 @@ header nav a.active {
     font-size: 16px;
     min-height: 40.62em;
     color: var(--blanco);
-    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 0%), url(../img/modooscuroyclaro.png);
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 0%), url(../img/sopadeletras.png);
     background-position: center center;
     background-size: cover;
     margin-bottom: 3.12em;
@@ -106,23 +106,139 @@ header nav a.active {
     margin-right: 1.25em;
 }
 
+/* --- --- Contenedor Titulo y Controles --- --- */
+.titulo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.titulo-container h3 {
+    color: #fff;
+    font-size: 30px;
+}
+
+.titulo-container .indicadores button {
+    background: #fff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.titulo-container .indicadores button:hover,
+.titulo-container .indicadores button.activo {
+    background-color: var(--azul2);
+}
+
+
+/* --- --- Contenedor principal y flechas --- --- */
+.proyectos-container {
+    margin-bottom: 70px;
+    padding: 30px;
+}
+
+.proyectos-container .contenedor-principal {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.proyectos-container .contenedor-principal .flecha-L,
+.proyectos-container .contenedor-principal .flecha-R {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, .3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: var(--blanco);
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.proyectos-container .contenedor-principal .flecha-L:hover,
+.proyectos-container .contenedor-principal .flecha-R:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.proyectos-container .contenedor-principal .flecha-L {
+    left: 0;
+}
+
+.proyectos-container .contenedor-principal .flecha-R {
+    right: 0;
+}
+
+/* --- --- Carousel --- --- */
+.proyectos-container .container-carousel {
+    width: 100%;
+    padding: 20px 0px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.proyectos-container .container-carousel .carousel {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.proyectos-container .container-carousel .carousel .proyecto {
+    min-width: 33.3%;
+    transition: .3 ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.proyectos-container .container-carousel .carousel .proyecto:hover {
+    transform: scale(1.2);
+    transform-origin: center;
+    transition: .3s ease all;
+}
+
+.proyectos-container .container-carousel .carousel .proyecto img {
+    width: 100%;
+    vertical-align: top;
+}
+
+
 /* --- --- Media Queries --- --- */
-@media screen and (max-widht:800px) {
-    header .logotipo{
+@media screen and (max-widht: 800px) {
+    header .logotipo {
         margin-bottom: 10px;
         font-size: 30px;
     }
 
-    header .container{
+    header .container {
         flex-direction: column;
         text-align: center;
     }
 
-    .proyecto-principal{
+    .proyecto-principal {
         font-size: 14px;
     }
 
-    .proyecto-principal .description{
+    .proyecto-principal .description {
         max-width: 100%;
     }
+
+    .proyectos-container .container-carousel {
+        overflow: visible;
+    }
+
+    .proyectos-container .container-carousel .carousel {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .proyectos-container .indicadores,
+    .proyectos-container .flecha-L,
+    .proyectos-container .flecha-R{
+        display: none;
+    }
+
 }
