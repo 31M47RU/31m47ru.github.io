@@ -1,0 +1,23 @@
+:root {
+    --blanco: #e2f1ff;
+    --gris: #AAA;
+    --negro: #0f1116;
+    --azul1: #393f55;
+    --azul2: #77aec9;
+    --azul3: #28727f;
+    --azul4: #369f9a;
+    --azul5: #69d7b5;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+} */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: var(--azul2);
+}
+
