@@ -1,9 +1,19 @@
+let atqPlayer
+let atqEnemy
+
+let spanAtqPlayer = document.getElementById("atq-player").innerHTML
+
 function iniciarJuego() {
     let btnMascotaPlayer = document.getElementById("btn-mascota")
     btnMascotaPlayer.addEventListener("click", seleccionarMascotaPlayer)
-}
 
-window.addEventListener("load", iniciarJuego)
+    btnFuego = document.getElementById("btn-fuego")
+    btnFuego.addEventListener("click", atqFuego)
+    btnAgua = document.getElementById("btn-agua")
+    btnAgua.addEventListener("click", atqAgua)
+    btnTierra = document.getElementById("btn-tierra")
+    btnTierra.addEventListener("click", atqTierra)
+}
 
 function random_(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
@@ -25,12 +35,50 @@ function seleccionarMascotaPlayer() {
 }
 
 function seleccionarMascotaPC() {
-    let spanEnemigo = document.getElementById("nom-enemigo")
+    let spanEnemy = document.getElementById("nom-enemigo")
     let ataqueRandom = random_(1, 3)
 
-    if (ataqueRandom == 1) { spanEnemigo.innerHTML = "HIPODOGE" }
-    else if (ataqueRandom == 2) { spanEnemigo.innerHTML = "CAPIPEPO" }
-    else if (ataqueRandom == 3) { spanEnemigo.innerHTML = "RATIGUEYA" }
+    if (ataqueRandom == 1) { spanEnemy.innerHTML = "HIPODOGE" }
+    else if (ataqueRandom == 2) { spanEnemy.innerHTML = "CAPIPEPO" }
+    else if (ataqueRandom == 3) { spanEnemy.innerHTML = "RATIGUEYA" }
     else { alert("ERROR") }
 }
 
+function ataqueEnemy() {
+    let spanAtqEnemy = document.getElementById("atq-enemigo").innerHTML
+
+    rta = random_(1, 3)
+
+    if (rta == 1) {
+        atqEnemy = "FUEGO 🔥"
+        spanAtqEnemy= "FUEGO 🔥"
+    }
+    else if (rta == 2) {
+        atqEnemy = "AGUA 💧"
+        spanAtqEnemy = "AGUA 💧"
+    }
+    else if (rta == 3) {
+        atqEnemy = "TIERRA 🌱"
+        spanAtqEnemy = "TIERRA 🌱"
+    }
+}
+
+function atqFuego() {
+    atqPlayer = "FUEGO 🔥"
+    spanAtqPlayer = "FUEGO 🔥"
+    ataqueEnemy()
+}
+
+function atqAgua() {
+    atqPlayer = "AGUA 💧"
+    spanAtqPlayer = "AGUA 💧"
+    ataqueEnemy()
+}
+
+function atqTierra() {
+    atqPlayer = "TIERRA 🌱"
+    spanAtqPlayer = "TIERRA 🌱"
+    ataqueEnemy()
+}
+
+window.addEventListener("load", iniciarJuego)
